@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 16px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+a{
+    text-decoration: none;
+}
+.navbar{
+    height: 55px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    background-color: #fff;
+    color: #0A0A0A;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container{
+    padding-inline: 15vw;
+
+}
+.navbar .logo{
+    font-size: 1.5em;
+    font-weight: bold;
+    color: rgb(255,0,86);
+    text-shadow: 0 1px 3px rgba(0,0,0,0.2)
+}
+.navbar .logo span{
+    color: #0A0A0A;
+}
+.navbar .nav-links a{
+    margin-left: 1em;
+    color: #575757;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: relative;
+    font-size: .9em;
+}
+.navbar .nav-links a::before {
+    content: '';
+    display: inline-block;
+    height: 3px;
+    width: 100%;
+    background-color: rgb(255, 0, 86);
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.2s ease-in-out;
+}
+.navbar .nav-links a:hover::before {
+    transform: scaleX(1);
+}
+.navbar .nav-links a.active:hover {
+    color: rgb(255, 0, 86);
+    font-weight: bolder;
+}
+.navbar .sidebar-btn{
+    height: 28px;
+    width: 30px;
+    position: relative;
+    display: none;
+}
+.navbar .sidebar-btn .bar{
+    border-radius: 5px;
+    height: 6px;
+    width: 100%;
+    background-color: #0A0A0A;
+    position: absolute;
+    transition: transform 0.3s ease-in-out;
+}
+.navbar .sidebar-btn .bar:nth-child(1) {
+    top: 0;
+}
+.navbar .sidebar-btn .bar:nth-child(2) {
+    top: 50%;
+    transform-origin: right;
+    transform:scaleX(.8) translateY(-50%);
+}
+.navbar .sidebar-btn .bar:nth-child(3) {
+    top: 100%;
+    transform-origin: right;
+    transform:scaleX(1.1) translateY(-100%);
+}
+.navbar .sidebar-btn.active .bar{
+    transform-origin: center;
+    top: 50%;
+}
+.navbar .sidebar-btn.active .bar:nth-child(1) {
+    transform: translate(0,-50%) scale(1) rotate(45deg)
+}
+
+.navbar .sidebar-btn.active .bar:nth-child(2) {
+    transform: scaleX(0) translateY(-50%);
+}
+
+.navbar .sidebar-btn.active .bar:nth-child(3) {
+    transform:translate(0,-50%) scale(1) rotate(-45deg);
+}
+
+
+@media screen and (max-width: 768px) {
+    .navbar .nav-links {
+        display: none;
+    }
+
+    .navbar .sidebar-btn {
+        display: block;
+    }
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 200px;
+    background-color:#fff;
+    box-shadow: 0 0 0 1000px rgba(0,0,0,0.2),3px 0 5px rgba(0,0,0,0.2);
+}
