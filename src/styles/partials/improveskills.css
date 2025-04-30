@@ -1,0 +1,40 @@
+.section.improve-skills .col.img img{
+    width: 100%;
+}
+.section.improve-skills .col.typography {
+    padding-left: 1em;
+}
+.section.improve-skills .col.typography .skill-item{
+    border-left: .2em solid rgb(255, 0, 86);
+    margin-bottom: .5em;
+    padding: .1em 0 .1em .5em;
+    color: #575757;
+    font-weight: bold;
+    transform: translateX(100%);
+    opacity: 0;
+    animation: slideInRight 0.3s ease forwards;
+}
+.section.improve-skills .col.typography .skill-item:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  .section.improve-skills .col.typography .skill-item:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .section.improve-skills .col.typography .skill-item:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  .section.improve-skills .col.typography .skill-item:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+  .section.improve-skills .col.typography .skill-item:nth-child(5) {
+    animation-delay: 0.5s;
+  }
+  .section.improve-skills .col.typography .skill-item:nth-child(6) {
+    animation-delay: 0.6s;
+  }
+  .section.improve-skills .col.typography .skill-item:nth-child(7) {
+    animation-delay: 0.7s;
+  }
+.section.improve-skills .col.typography .btn{
+    margin-top: .75em;
+}

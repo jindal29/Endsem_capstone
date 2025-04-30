@@ -11,7 +11,7 @@ a{
     text-decoration: none;
 }
 .container{
-    padding-inline: 15vw;
+    padding-inline: 12vw;
 
 }
 
@@ -27,6 +27,8 @@ a{
 }
 @import 'partials/navbar.css';
 @import 'partials/animations.css';
+@import 'partials/improveskills.css';
+@import 'partials/herosection.css';
 .sidebar .sidebar-link{
     display: block;
     padding: .5em 1em;
@@ -63,14 +65,16 @@ a{
 .section{
     display: flex;
     align-items: center;
+    margin-bottom: 3vw;
 }
 .section .col{
     width: 50%;
 }
 .section .title{
     color: #0A0A0A;
-    font-size: 3em;
+    font-size: 2.5em;
     margin-bottom: .25em;
+    font-weight: 900;
 }
 .section .info{
     color: #575757;
@@ -79,15 +83,18 @@ a{
     line-height: 1.3;
     margin-bottom: 1.25em;
 }
-.hero .gallery{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 1.75 vw;
-}
 .custom-image{
     background-color: red;
     height: 0;
     width: 100%;
+    position: relative;
+}
+.custom-image img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 .btn{
     border: none;
@@ -104,4 +111,28 @@ a{
 }
 .btn:hover{
     box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+img{
+    object-fit: cover;
+}
+.hero .typography{
+    padding-right: 1em;
+}
+.section.quote{
+    display: block;    
+}
+.section.quote .quote-text{
+    font-size: 1.2em;
+    line-height: 1.3;
+    color: #0A0A0A;
+}
+.section.quote .quote-text svg{
+    color: rgb(255, 0, 86);
+    font-size: 1.5em;
+    margin-right: .5em;
+}
+.section.quote .quote-author{
+    color: #575757;
+    text-align: right;
+    margin-top: 1em;
 }
