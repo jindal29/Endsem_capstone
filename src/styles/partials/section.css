@@ -1,0 +1,42 @@
+.section{
+    display: flex;
+    align-items: center;
+    margin-bottom: 3vw;
+}
+.section .col{
+    width: 50%;
+}
+.section .title{
+    color: #0A0A0A;
+    font-size: 2.5em;
+    margin-bottom: .25em;
+    font-weight: 900;
+}
+.section .info{
+    color: #575757;
+    font-size: 1em;
+    letter-spacing: 1px;
+    line-height: 1.3;
+    margin-bottom: 1.25em;
+}
+.section.quote{
+    display: block;    
+}
+.section.quote .quote-text{
+    font-size: 1.2em;
+    line-height: 1.3;
+    color: #0A0A0A;
+}
+.section.quote .quote-text svg{
+    color: rgb(255, 0, 86);
+    font-size: 1.5em;
+    margin-right: .5em;
+}
+.section.quote .quote-author{
+    color: #575757;
+    text-align: right;
+    margin-top: 1em;
+}
+.section.chefs{
+    display: block;
+}
