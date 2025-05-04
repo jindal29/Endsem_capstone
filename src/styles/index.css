@@ -21,6 +21,8 @@ a{
 @import 'partials/herosection.css';
 @import 'partials/sidebar.css';
 @import 'partials/section.css';
+@import 'partials/chefs.css';
+@import 'partials/footer.css';
 .main{
     padding-block: 3vw;
 }
@@ -58,66 +60,4 @@ img{
 }
 .hero .typography{
     padding-right: 1em;
-}
-.chef-card{
-    display: flex;
-    height: 120px;
-    background-color: #fff;
-    border-radius: 5px;
-    overflow: hidden;
-}
-.chef-card img{
-    height: 100%;
-    width: 120px;
-    border-radius: 5px;
-}
-.section .chefs-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
-    gap: 1.5em;
-    margin-top: 3em;
-}
-.chef-card .chef-card-info{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding-bottom: .5em;
-    padding-left: 1em;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
-}
-.chef-card .chef-card-info .chef-card-name{
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #0A0A0A;
-}
-.chef-card .chef-card-info .chef-recipe-count{
-    font-size: 1.2em;
-    color: #575757;
-}
-.chef-card .chef-card-info .chef-cuisine{
-    font-size: 1.2em;
-    color: #575757;
-}
-.chef-card .chef-icons{
-    font-size: 1.2em;
-}
-.chef-card .chef-icons svg{
-    margin-right: .5em;
-}
-
-.chef-card .chef-icons svg:nth-child(1){
-    color: #0063f7;
-}
-.chef-card .chef-icons svg:nth-child(2){
-    color: #13b4ff;
-}
-.chef-card .chef-icons svg:nth-child(3){
-    color: #ff0056;
-}
-@media screen and (max-width: 768px) {
-    .chef-card{
-        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-    }
 }
