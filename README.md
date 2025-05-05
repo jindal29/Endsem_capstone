@@ -68,3 +68,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+## Ignored Files
+
+The following files/folders are excluded using `.gitignore` and are not pushed to the repository:
+
+- `node_modules/` – Dependency folder managed by npm/yarn.
+- `.env.local` – Environment variables for local development.
+- `.next/` – Next.js build output.
