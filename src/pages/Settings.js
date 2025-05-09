@@ -110,6 +110,7 @@ export default function Settings(){
               value: .5
         }
     ]
+    
     const [primaryColor, setPrimaryColor] = useState(0)
     const [fontSize, setFontSize] = useState(1)
     const [animationSpeed, setAnimationSpeed] = useState(1)

@@ -63,3 +63,17 @@ img{
 .hero .typography{
     padding-right: 1em;
 }
+.previous-searches{
+    display: block;
+}
+.previous-searches h2{
+    margin-bottom: 1em;
+    color: #0A0A0A;
+}
+.previous-searches-container .search-item{
+    background-color: rgb(255, 0, 86);
+    display: inline-block;
+    padding: .5em 1em;
+    margin: 0 .5em .5em 0;
+    color: #fff;
+}
