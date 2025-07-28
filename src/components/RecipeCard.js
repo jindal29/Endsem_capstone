@@ -7,7 +7,7 @@ export default function RecipeCard({recipe, index}){
             <div className="recipe-card-info">
                 <img className="auther-img" src={recipe.authorImg} alt=""/>
                 <p className="recipe-title">{recipe.title}</p>
-                <p className="recipe-desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <p className="recipe-desc">This is the yummy dish made by our top chef.</p>
                 <a className="view-btn" href="#!">VIEW RECIPE</a>
             </div>
         </div>

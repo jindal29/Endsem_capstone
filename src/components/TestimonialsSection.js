@@ -38,7 +38,7 @@ export default function TestimonialsSection() {
             <div className="testimonial-img-wrap">
               <img src={t.img} alt={t.author} className="testimonial-img" />
             </div>
-            <p className="testimonial-quote">"{t.quote}"</p>
+            <p className="testimonial-quote" style={{fontFamily:"sans-serif"}}>"{t.quote}"</p>
             <p className="testimonial-author">- {t.author}</p>
           </div>
         ))}

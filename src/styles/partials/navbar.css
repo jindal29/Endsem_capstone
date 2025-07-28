@@ -15,7 +15,8 @@
     font-size: 1.5em;
     font-weight: bold;
     color: rgb(255,0,86);
-    text-shadow: 0 1px 3px rgba(0,0,0,0.2)
+    text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    padding-right: 40px;
 }
 .navbar .logo span{
     color: #0A0A0A;
