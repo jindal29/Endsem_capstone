@@ -14,7 +14,7 @@ export default function HeroSection(){
     return(
     <>
     <div className="section hero">
-        <div className="col typography">
+        <div className="col typography" style={{animation: 'popOut 0.7s 0.1s both'}}>
             <h1 className="title">
                 What Are We About
             </h1>
@@ -25,7 +25,7 @@ export default function HeroSection(){
                 EXPLORE NOW
             </button>
         </div>
-        <div className="col gallery">
+        <div className="col gallery" style={{animation: 'slideInRight 0.8s 0.3s both'}}>
             {images.map((src,index)=>(
                 <CustomImage key={index} imgSrc={src} pt={"90%"}/>
             ))}

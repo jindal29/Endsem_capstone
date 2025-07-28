@@ -71,7 +71,7 @@ export default function Recipes(){
             <div className="recipes-container">
                 {/* <RecipeCard /> */}
                 {recipes.map((recipe, index) => (
-                    <RecipeCard key={index} recipe={recipe} />
+                    <RecipeCard key={index} recipe={recipe} index={index} />
                 ))}
             </div>
         </div>

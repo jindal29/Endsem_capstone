@@ -90,6 +90,63 @@
     transform:translate(0,-50%) scale(1) rotate(-45deg);
 }
 
+.navbar-darkmode-toggle {
+  margin-left: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+.darkmode-switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+}
+.darkmode-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc;
+  border-radius: 24px;
+  transition: background 0.2s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.2s;
+}
+.darkmode-switch input:checked + .slider {
+  background-color: var(--primary-color, #ff0056);
+}
+.darkmode-switch input:checked + .slider:before {
+  transform: translateX(20px);
+}
+@media (max-width: 700px) {
+  .navbar-darkmode-toggle {
+    margin-left: 0.5rem;
+  }
+  .darkmode-switch {
+    width: 36px;
+    height: 20px;
+  }
+  .slider:before {
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+  }
+}
+
 
 @media screen and (max-width: 768px) {
     .navbar .nav-links {
