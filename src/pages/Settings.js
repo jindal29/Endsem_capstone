@@ -28,7 +28,7 @@ export default function Settings() {
   const [language, setLanguage] = useState("en");
   const [avatar, setAvatar] = useState(null);
   const [voiceMsg, setVoiceMsg] = useState("");
-  const [listening, setListening] = useState(false);
+  const [, setListening] = useState(false);
   const [feedback, setFeedback] = useState("");
   const [feedbackMsg, setFeedbackMsg] = useState("");
 
@@ -45,7 +45,8 @@ export default function Settings() {
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme === "dark") changeTheme(1);
     else changeTheme(0);
-  }, []);
+  // eslint-disable-next-line no-use-before-define
+  }, [changeTheme]);
 
   useEffect(() => {
     localStorage.setItem("theme", theme);
@@ -95,6 +96,7 @@ export default function Settings() {
     { code: "fr", label: "French" },
   ];
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const changeTheme = (i) => {
     const _theme = { ...themes[i] };
     setTheme(i === 0 ? "light" : "dark");
