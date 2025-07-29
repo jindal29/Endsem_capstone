@@ -22,7 +22,7 @@ export default function Navbar() {
         setShowSidebar(false);
     }
 
-    const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'light');
+    const [theme] = useState(() => localStorage.getItem('theme') || 'light');
     useEffect(() => {
         localStorage.setItem('theme', theme);
         const root = document.documentElement;

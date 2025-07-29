@@ -22,9 +22,36 @@ export default function Login() {
 
   return React.createElement(
     'div',
-    { style: { maxWidth: '400px', margin: 'auto', padding: '2rem' } },
-    React.createElement('h2', null, 'Login'),
-    error ? React.createElement('p', { style: { color: 'red' } }, error) : null,
+    {
+      style: {
+        maxWidth: '400px',
+        margin: '5rem auto',
+        padding: '2rem',
+        border: '1px solid #ccc',
+        borderRadius: '12px',
+        boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
+        backgroundColor: '#f9f9f9',
+        fontFamily: 'Arial, sans-serif'
+      }
+    },
+    React.createElement(
+      'h2',
+      {
+        style: {
+          textAlign: 'center',
+          marginBottom: '1.5rem',
+          color: '#333'
+        }
+      },
+      'Login'
+    ),
+    error
+      ? React.createElement(
+          'p',
+          { style: { color: 'red', marginBottom: '1rem', textAlign: 'center' } },
+          error
+        )
+      : null,
     React.createElement(
       'form',
       { onSubmit: handleLogin },
@@ -33,22 +60,74 @@ export default function Login() {
         placeholder: 'Email',
         value: email,
         onChange: (e) => setEmail(e.target.value),
-        required: true
+        required: true,
+        style: {
+          width: '100%',
+          padding: '0.75rem',
+          marginBottom: '1rem',
+          borderRadius: '8px',
+          border: '1px solid #ccc',
+          fontSize: '1rem'
+        }
       }),
       React.createElement('input', {
         type: 'password',
         placeholder: 'Password',
         value: password,
         onChange: (e) => setPassword(e.target.value),
-        required: true
+        required: true,
+        style: {
+          width: '100%',
+          padding: '0.75rem',
+          marginBottom: '1.5rem',
+          borderRadius: '8px',
+          border: '1px solid #ccc',
+          fontSize: '1rem'
+        }
       }),
-      React.createElement('button', { type: 'submit' }, 'Login')
+      React.createElement(
+        'button',
+        {
+          type: 'submit',
+          style: {
+            width: '100%',
+            padding: '0.75rem',
+            border: 'none',
+            borderRadius: '8px',
+            backgroundColor: '#007bff',
+            color: '#fff',
+            fontSize: '1rem',
+            cursor: 'pointer',
+            transition: 'background-color 0.3s'
+          },
+          onMouseOver: (e) => (e.target.style.backgroundColor = '#0056b3'),
+          onMouseOut: (e) => (e.target.style.backgroundColor = '#007bff')
+        },
+        'Login'
+      )
     ),
     React.createElement(
       'p',
-      null,
+      {
+        style: {
+          marginTop: '1.5rem',
+          textAlign: 'center',
+          fontSize: '0.95rem'
+        }
+      },
       `Don't have an account? `,
-      React.createElement('a', { href: '/register' }, 'Register')
+      React.createElement(
+        'a',
+        {
+          href: '/register',
+          style: {
+            color: '#007bff',
+            textDecoration: 'none',
+            fontWeight: 'bold'
+          }
+        },
+        'Register'
+      )
     )
   );
 }
